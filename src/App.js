@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import "./App.scss";
+import { Layout } from "./components/Layout/Layout";
+import { ListUsers } from "./pages/ListUsers/ListUsers";
+import { UserProfile } from "./pages/UserProfile/UserProfile";
+import { useData } from "./hook/useData";
+import { getUser } from "./query/getUser";
 function App() {
+  const { setUsers } = useData();
+  React.useEffect(() => {
+    getUser().then((data) => setUsers(data));
+   
+  }, []);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <Routes>
+        <Route path="/" element={<Layout></Layout>}>
+          <Route path="/" element={<ListUsers></ListUsers>}></Route>
+          <Route path="/user/:id" element={<UserProfile></UserProfile>}></Route>
+        </Route>
+      </Routes>
     </div>
   );
 }

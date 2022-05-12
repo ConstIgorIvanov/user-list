@@ -1,0 +1,17 @@
+.layout {
+  display: grid;
+  grid-template-columns: 200px auto;
+  gap: 2vw;
+}
+
+a.text:active, /* активная/посещенная ссылка */
+a.text:hover,  /* при наведении */
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.link {
+  color: black;
+}
+

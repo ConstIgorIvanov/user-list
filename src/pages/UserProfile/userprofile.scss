@@ -1,0 +1,26 @@
+.container {
+  margin: 10px 20px;
+  width: 70%;
+  height: 1000px;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+      font-size: 26px;
+      font-weight: bold;
+  }
+  &__btn {
+    width: 160px;
+    height: 40px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #4b51ef;
+    color: white;
+    border: none;
+  }
+  &__btn:hover {
+    background-color: #1920eb;
+  }
+}

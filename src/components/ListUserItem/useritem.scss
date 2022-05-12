@@ -1,0 +1,40 @@
+.card {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  padding: 5px;
+  margin-bottom: 20px;
+
+  &__container {
+    display: flex;
+    font-size: 22px;
+  }
+
+  &__title {
+    margin-right: 15px;
+    color: gray;
+    font-size: 22px;
+  }
+  &__btn {
+    width: 160px;
+    height: 40px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #4b51ef;
+    color: white;
+    border: none;
+  }
+  &__link {
+    padding: 7px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &__btn:hover {
+    background-color: #1920eb;
+  }
+}

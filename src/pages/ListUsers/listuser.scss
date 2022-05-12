@@ -1,0 +1,24 @@
+.listuser__container {
+  display: flex;
+  flex-direction: column;
+  &__title {
+    margin: 10px 20px;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  &__list {
+    margin: 10px 20px !important;
+  }
+
+  &__flex {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.right {
+  font-size: 24px;
+  align-self: flex-end;
+}
