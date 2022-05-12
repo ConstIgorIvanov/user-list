@@ -3,8 +3,8 @@ import { EditUserForm } from "../../components/EditUserForm/EditUserForm";
 import { useData } from "../../hook/useData";
 import './userprofile.scss'
 const UserProfile = () => {
-  const { currentUser,users } = useData();
-  console.log(users)
+  const { currentUser} = useData();
+
   const [edit, setEdit] = React.useState(true);
   const HandleEdit = () => {
     setEdit((edit) => !edit);
