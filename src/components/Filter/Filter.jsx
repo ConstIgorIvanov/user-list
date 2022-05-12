@@ -8,7 +8,7 @@ const Filter = () => {
       <div className="filter__title">Сортировка</div>
       <div className="filter__group__btn">
         <button className="filter__btn">
-          <Link className="filter__link" to="user-list/">
+          <Link className="filter__link" to="/">
             На главную
           </Link>
         </button>

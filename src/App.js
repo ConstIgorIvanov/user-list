@@ -16,10 +16,10 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path="user-list/" element={<Layout></Layout>}>
-          <Route path="user-list/" element={<ListUsers></ListUsers>}></Route>
+        <Route path="/" element={<Layout></Layout>}>
+          <Route path="/" element={<ListUsers></ListUsers>}></Route>
           <Route
-            path="user-list/user/:id"
+            path="/user/:id"
             element={<UserProfile></UserProfile>}
           ></Route>
         </Route>
