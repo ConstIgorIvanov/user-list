@@ -14,11 +14,14 @@ function App() {
   }, []);
   
   return (
-    <div >
+    <div>
       <Routes>
-        <Route path="/" element={<Layout></Layout>}>
-          <Route path="/" element={<ListUsers></ListUsers>}></Route>
-          <Route path="/user/:id" element={<UserProfile></UserProfile>}></Route>
+        <Route path="user-list/" element={<Layout></Layout>}>
+          <Route path="user-list/" element={<ListUsers></ListUsers>}></Route>
+          <Route
+            path="user-list/user/:id"
+            element={<UserProfile></UserProfile>}
+          ></Route>
         </Route>
       </Routes>
     </div>

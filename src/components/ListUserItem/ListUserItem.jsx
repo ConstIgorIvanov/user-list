@@ -23,7 +23,7 @@ const ListUserItem = ({ id, name, city, company }) => {
         </div>
       </div>
       <button className="card__btn" onClick={() => test(id)}>
-        <Link className="card__link" to={`user/${id}`}>
+        <Link className="card__link" to={`user-list/user/${id}`}>
           Подробнее
         </Link>
       </button>
