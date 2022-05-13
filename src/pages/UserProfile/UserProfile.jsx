@@ -3,7 +3,7 @@ import { EditUserForm } from "../../components/EditUserForm/EditUserForm";
 import { useData } from "../../hook/useData";
 import "./userprofile.scss";
 const UserProfile = () => {
-  const { currentUser } = useData();
+  const { currentUser, setCurrentUser } = useData();
 
   const [edit, setEdit] = React.useState(true);
   const HandleEdit = () => {
@@ -17,7 +17,11 @@ const UserProfile = () => {
           Редактировать
         </button>
       </div>
-      <EditUserForm currentUser={currentUser} edit={edit}></EditUserForm>
+      <EditUserForm
+        currentUser={currentUser}
+        setCurrentUser={setCurrentUser}
+        edit={edit}
+      ></EditUserForm>
     </div>
   );
 };

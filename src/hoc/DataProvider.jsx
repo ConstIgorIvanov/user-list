@@ -28,6 +28,7 @@ export const DataProvider = ({ children }) => {
     users,
     setUsers,
     findCurrent,
+    setCurrentUser,
     currentUser,
     sortSity,
     sortCompany,
