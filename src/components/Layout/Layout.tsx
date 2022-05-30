@@ -1,7 +1,8 @@
-import { Outlet } from "react-router-dom";
-import { Filter } from "../Filter/Filter";
+import { Outlet } from 'react-router-dom';
 
-const Layout = () => {
+import { Filter } from '../Filter/Filter';
+
+const Layout: React.FC = () => {
   return (
     <div className="layout">
       <Filter></Filter>

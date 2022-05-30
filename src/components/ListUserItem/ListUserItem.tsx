@@ -1,12 +1,21 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { useData } from "../../hook/useData";
-import "./useritem.scss";
-const ListUserItem = ({ id, name, city, company }) => {
+import { Link } from 'react-router-dom';
+
+import { useData } from '../../hook/useData';
+
+import './useritem.scss';
+
+interface ListUserItemProps {
+  id: number;
+  name: string;
+  city: string;
+  company: string;
+}
+
+const ListUserItem: React.FC<ListUserItemProps> = ({ id, name, city, company }) => {
   const { findCurrent } = useData();
 
-  const test = (e) => {
-    findCurrent(e);
+  const getCurrent = (id: number) => {
+    findCurrent(id);
   };
 
   return (
@@ -22,7 +31,7 @@ const ListUserItem = ({ id, name, city, company }) => {
           <div className="card__title">Компания:</div> {company}
         </div>
       </div>
-      <button className="card__btn" onClick={() => test(id)}>
+      <button className="card__btn" onClick={() => getCurrent(id)}>
         <Link className="card__link" to={`/user/${id}`}>
           Подробнее
         </Link>

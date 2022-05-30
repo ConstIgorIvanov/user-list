@@ -1,8 +1,12 @@
-import { Link } from "react-router-dom";
-import "./filter.scss";
-import {useData} from '../../hook/useData'
+import { Link } from 'react-router-dom';
+
+import { useData } from '../../hook/useData';
+
+import './filter.scss';
+
 const Filter = () => {
   const { sortSity, sortCompany } = useData();
+
   return (
     <div className="filter">
       <div className="filter__title">Сортировка</div>

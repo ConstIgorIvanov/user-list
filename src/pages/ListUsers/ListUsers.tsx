@@ -1,7 +1,9 @@
-import { ListUserItem } from "../../components/ListUserItem/ListUserItem";
-import { useData } from "../../hook/useData";
-import "./listuser.scss";
-const ListUsers = () => {
+import { ListUserItem } from '../../components/ListUserItem/ListUserItem';
+import { useData } from '../../hook/useData';
+
+import './listuser.scss';
+
+const ListUsers: React.FC = () => {
   const { users } = useData();
 
   return (
@@ -16,10 +18,9 @@ const ListUsers = () => {
                 id={user.id}
                 name={user.name}
                 city={user.address.city}
-                company={user.company.name}
-              ></ListUserItem>
+                company={user.company.name}></ListUserItem>
             ))}
-         <div className="right">Найдено {users.length} пользователей</div>
+            <div className="right">Найдено {users.length} пользователей</div>
           </div>
         ) : (
           <div>loading</div>
