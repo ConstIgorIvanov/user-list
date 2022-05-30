@@ -4,4 +4,4 @@ user from jsonplaceholder
 
 hoc Context, react-hook-form.
 
-sort user by city/company (A-Z)
+sort user by city/company (A-Z).
